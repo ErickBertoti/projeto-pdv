@@ -65,7 +65,88 @@ const PointOfSale = () => {
   };
 
   const printReceipt = () => {
-    window.print();
+    // Create a new window for printing
+    const printWindow = window.open('', '', 'width=600,height=600');
+    
+    // Write a custom print-specific stylesheet
+    printWindow.document.write(`
+      <html>
+        <head>
+          <style>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 20px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+            }
+            .receipt {
+              width: 300px;
+              border: 1px solid #000;
+              padding: 20px;
+              text-align: center;
+            }
+            .receipt-header {
+              border-bottom: 1px solid #000;
+              padding-bottom: 10px;
+              margin-bottom: 10px;
+            }
+            .receipt-items {
+              text-align: left;
+            }
+            .receipt-total {
+              border-top: 1px solid #000;
+              margin-top: 10px;
+              padding-top: 10px;
+              font-weight: bold;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="receipt">
+            <div class="receipt-header">
+              <h2>Cupom Fiscal</h2>
+              <p><strong>Cliente:</strong> ${receipt.cliente.nome}</p>
+              <p><strong>CPF:</strong> ${receipt.cliente.cpf}</p>
+            </div>
+            <div class="receipt-items">
+              <h3>Itens:</h3>
+              ${receipt.itens.map(item => `
+                <div class="receipt-item">
+                  <span>${item.nome}</span>
+                  <span style="float: right;">R$ ${item.valor_unitario.toFixed(2)}</span>
+                </div>
+              `).join('')}
+            </div>
+            <div class="receipt-total">
+              <div>
+                <span>Total:</span>
+                <span style="float: right;">R$ ${receipt.valor_total.toFixed(2)}</span>
+              </div>
+              <div>
+                <span>Valor Pago:</span>
+                <span style="float: right;">R$ ${receipt.valor_pago.toFixed(2)}</span>
+              </div>
+              <div style="color: green;">
+                <span>Troco:</span>
+                <span style="float: right;">R$ ${receipt.troco.toFixed(2)}</span>
+              </div>
+            </div>
+          </div>
+        </body>
+      </html>
+    `);
+    
+    // Close the document writing
+    printWindow.document.close();
+    
+    // Wait a bit for rendering, then print
+    setTimeout(() => {
+      printWindow.print();
+      printWindow.close();
+    }, 500);
   };
 
   return (

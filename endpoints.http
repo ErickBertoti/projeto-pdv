@@ -12,9 +12,9 @@ POST http://localhost:8080/pdv
 Content-Type: application/json
 
 {
-  "clienteId": "0CEeTHUceUq2auOPtvaN",
-  "produtos": ["4FSyr2mAX47FThgYvXOC", "B28RgyjXgKHK335FjL7x", "ELUEQC7EDBo8GGK1Kq2e", "I1unp44tlBh8bkCOlPsw"],
-  "valorPago": 30.00
+  "clienteId": "em1wQmENvUb8OKtk8ri4",
+  "produtos": ["B28RgyjXgKHK335FjL7x","ELUEQC7EDBo8GGK1Kq2e" ],
+  "valorPago": 40.00
 }
 
 

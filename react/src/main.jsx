@@ -21,7 +21,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/clientes" element={<CustomerList />} />
           <Route path="/clientes/novo" element={<CustomerForm />} />
           <Route path="/clientes/editar/:id" element={<CustomerForm />} />
-          
           <Route path="/produtos" element={<ProductList />} />
           <Route path="/produtos/novo" element={<ProductForm />} />
           <Route path="/produtos/editar/:id" element={<ProductForm />} />

@@ -1,5 +1,5 @@
 import { Disclosure } from '@headlessui/react';
-import { Menu, Home, Users, Box, ShoppingCart, X } from 'lucide-react';
+import { Menu, Users, Box, ShoppingCart, X } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
