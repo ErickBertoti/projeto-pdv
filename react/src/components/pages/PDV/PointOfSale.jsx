@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { 
-  ShoppingCart, 
-  User, 
-  CreditCard, 
-  Check, 
-  X, 
-  Printer 
-} from 'lucide-react';
+import { ShoppingCart, User, CreditCard, Check, X, Printer } from 'lucide-react';
 
 const PointOfSale = () => {
   const [customers, setCustomers] = useState([]);
