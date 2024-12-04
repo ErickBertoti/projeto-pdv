@@ -65,10 +65,8 @@ const PointOfSale = () => {
   };
 
   const printReceipt = () => {
-    // Create a new window for printing
     const printWindow = window.open('', '', 'width=600,height=600');
     
-    // Write a custom print-specific stylesheet
     printWindow.document.write(`
       <html>
         <head>
@@ -139,10 +137,8 @@ const PointOfSale = () => {
       </html>
     `);
     
-    // Close the document writing
     printWindow.document.close();
     
-    // Wait a bit for rendering, then print
     setTimeout(() => {
       printWindow.print();
       printWindow.close();
