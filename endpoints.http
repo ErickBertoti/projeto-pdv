@@ -1,0 +1,21 @@
+### Deletar
+DELETE http://localhost:3000/produtos/xRZmlGDSd0lbakMVCO6o
+
+### GET dos produtos
+GET http://localhost:3000/produtos/
+
+### GET dos clientes
+GET http://localhost:3000/clientes/
+
+### Post do PDV
+POST http://localhost:3000/pdv
+Content-Type: application/json
+
+{
+  "clienteId": "0CEeTHUceUq2auOPtvaN",
+  "produtos": ["4FSyr2mAX47FThgYvXOC", "B28RgyjXgKHK335FjL7x", "ELUEQC7EDBo8GGK1Kq2e", "I1unp44tlBh8bkCOlPsw"],
+  "valorPago": 30.00
+}
+
+
+
