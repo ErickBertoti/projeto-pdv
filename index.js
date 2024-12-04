@@ -16,7 +16,7 @@ const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerDefinition = require('./swagger/swaggerDef');
 const swaggerRoutes = require('./swagger/swaggerRoutes');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 // Configuração do Swagger JSDoc
 const swaggerOptions = {

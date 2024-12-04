@@ -1,14 +1,14 @@
 ### Deletar
-DELETE http://localhost:3000/produtos/xRZmlGDSd0lbakMVCO6o
+DELETE http://localhost:8080/produtos/xRZmlGDSd0lbakMVCO6o
 
 ### GET dos produtos
-GET http://localhost:3000/produtos/
+GET http://localhost:8080/produtos/
 
 ### GET dos clientes
-GET http://localhost:3000/clientes/
+GET http://localhost:8080/clientes/
 
 ### Post do PDV
-POST http://localhost:3000/pdv
+POST http://localhost:8080/pdv
 Content-Type: application/json
 
 {
